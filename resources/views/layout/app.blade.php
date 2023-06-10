@@ -113,12 +113,12 @@
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('letter_out') }}" aria-expanded="false"><i class="icon icon-form"></i>
+                          <a href="{{ route('letter_in') }}" aria-expanded="false"><i class="icon icon-form"></i>
                               <span  class="nav-text">Surat Masuk</span>
                           </a>
                       </li>
                       <li>
-                          <a href="{{ route('letter_in') }}" aria-expanded="false"><i class="icon icon-form"></i>
+                          <a href="{{ route('letter_out') }}" aria-expanded="false"><i class="icon icon-form"></i>
                               <span  class="nav-text">Surat Keluar</span>
                           </a>
                       </li>

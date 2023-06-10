@@ -9,8 +9,8 @@
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
                                 <h4 class="card-title">Surat Keluar</h4>
-                                <button type="button" class="btn btn-rounded btn-primary" data-toggle="modal" data-target="#basicModal"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
-                                </span>Tambah</button>
+                                <a href="{{ route('letter_out_add') }}" class="btn btn-rounded btn-primary"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
+                                </span>Tambah</a>
                             </div>  
 
                             <div class="card-body">
@@ -32,7 +32,7 @@
                                             <tr>
                                                 <th>{{ $no++  }}</th>
                                                 <td>{{ $row->letter_no }}</td>
-                                                <td>{{ $row->letter_date}}</td>
+                                                <td>{{ $row->letterout_date}}</td>
                                                 <td>{{ $row->regarding }}</td>
                                                 <td>{{ $row->purpose}}</td>
                                                 <td>

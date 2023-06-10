@@ -9,8 +9,8 @@
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
                                 <h4 class="card-title">Surat Masuk</h4>
-                                <button type="button" class="btn btn-rounded btn-primary" data-toggle="modal" data-target="#basicModal"><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
-                                </span>Tambah</button>
+                                <a href="{{ route('letter_in_add') }}" class="btn btn-rounded btn-primary" ><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
+                                </span>Tambah</a>
                             </div>  
 
                             <div class="card-body">
@@ -42,6 +42,7 @@
                                                 <td>{{ $row->disposisi}}</td>
                                                 <td>{{ $row->name}}</td>
                                                 <td>
+                                                    <a href=""  class="btn btn-info">Info</a>
                                                     <a href=""  class="btn btn-warning">Edit</a>
                                                     <a href="/sender_delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
                                                 </td>
