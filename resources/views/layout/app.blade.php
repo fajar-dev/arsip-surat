@@ -128,7 +128,7 @@
                           </a>
                       </li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-single-04"></i>
+                          <a href="{{ route('user') }}" aria-expanded="false"><i class="icon icon-single-04"></i>
                               <span  class="nav-text">User</span>
                           </a>
                       </li>

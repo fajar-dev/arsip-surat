@@ -42,6 +42,17 @@ class LetterController extends Controller
         return redirect()->route('letter_in')->with('success','Notes have been added');
     }
 
+    public function detail($id)
+    {
+        $data = DB::table('letters')
+        ->where('letters.id', $id)
+        ->select('letters.id', 'letters.letter_no', 'letters.letter_date', 'letters.date_received', 'letters.agenda_no', 'letters.regarding', 'letters.disposisi', 'senders.name AS sender_name', 'agencies.name AS agencies_name','letters.letter_file')
+        ->join('senders', 'senders.id', '=', 'letters.sender_id')
+        ->join('agencies', 'agencies.id', '=', 'letters.agency_id')
+        ->first();
+        return view('letterin_detail', compact('data'));
+    }
+
     public function delete($id)
     {
         DB::table('letters')->where('id', $id)->delete();

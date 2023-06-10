@@ -41,6 +41,5 @@ class SenderController extends Controller
     {
         DB::table('senders')->where('id', $id)->delete();
         return redirect()->route('sender')->with('success','Notes have been added');
-
     }
 }

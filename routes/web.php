@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LetterController;
 use App\Http\Controllers\SenderController;
 use App\Http\Controllers\AgenciesController;
@@ -43,4 +44,12 @@ Route::get('/letter_in', [LetterController::class, 'index'])->name('letter_in');
 Route::get('/letter_in/add', [LetterController::class, 'add'])->name('letter_in_add');
 Route::post('/letter_in/add/submit', [LetterController::class, 'submit'])->name('letter_in_add_submit');
 Route::get('/letter_in/delete/{id}', [LetterController::class, 'delete'])->name('letter_in_add_delete');
+Route::get('/letter_in/detail/{id}', [LetterController::class, 'detail'])->name('letter_in_detail');
+
+Route::get('/user', [UserController::class, 'index'])->name('user');
+Route::post('/user/add', [UserController::class, 'add'])->name('user_add');
+Route::post('/user/update', [UserController::class, 'update'])->name('user_update');
+Route::post('/user/change_password', [UserController::class,'change'])->name('change_pass');
+Route::get('/user/delete/{id}', [UserController::class, 'delete'])->name('user_delete');
+
 

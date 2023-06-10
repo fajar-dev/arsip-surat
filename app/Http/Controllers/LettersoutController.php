@@ -63,7 +63,6 @@ class LettersoutController extends Controller
             ]);
         }
         return redirect()->route('letter_out')->with('success','Notes have been added');
-
     }
 
     public function detail($id)
