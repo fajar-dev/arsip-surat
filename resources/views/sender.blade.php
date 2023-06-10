@@ -29,6 +29,18 @@
                                                         <label for="">Nama Pengirim</label>
                                                         <input type="text" class="form-control input-default" name="nama" placeholder="nama Pengirim" required>
                                                     </div>
+                                                    <div class="form-group">
+                                                      <label for="">Alamat</label>
+                                                      <input type="text" class="form-control input-default" name="address" placeholder="Alamat Pengirim"  required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                      <label for="">NO. HP</label>
+                                                      <input type="text" class="form-control input-default" name="phone" placeholder="No. HP Pengirim"  required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                      <label for="">Email</label>
+                                                      <input type="email" class="form-control input-default" name="email" placeholder="Email Pengirim"  required>
+                                                    </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -47,7 +59,10 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Name</th>
-                                                <th>Price</th>
+                                                <th>Address</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -56,6 +71,9 @@
                                             <tr>
                                                 <th>{{ $no++  }}</th>
                                                 <td>{{ $row->name }}</td>
+                                                <td>{{ $row->address}}</td>
+                                                <td>{{ $row->phone }}</td>
+                                                <td>{{ $row->email}}</td>
                                                 <td>
                                                     <a href="" data-toggle="modal" data-target="#edit{{ $row->id }}" class="btn btn-warning">Edit</a>
                                                     <a href="/sender_delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
@@ -67,7 +85,7 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title">Tambah Pengirim</h5>
+                                                                <h5 class="modal-title">Edit Pengirim</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                                                                 </button>
                                                             </div>
@@ -78,6 +96,18 @@
                                                                     <div class="form-group">
                                                                         <label for="">Nama Pengirim</label>
                                                                         <input type="text" class="form-control input-default" name="nama" placeholder="nama Pengirim" value="{{ $row->name }}" required>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                      <label for="">Alamat</label>
+                                                                      <input type="text" class="form-control input-default" name="address" placeholder="Alamat Pengirim" value="{{ $row->address }}" required>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                      <label for="">No.HP</label>
+                                                                      <input type="text" class="form-control input-default" name="phone" placeholder="No.HP Pengirim" value="{{ $row->phone }}" required>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                      <label for="">Email</label>
+                                                                      <input type="email" class="form-control input-default" name="email" placeholder="Email Pengirim" value="{{ $row->email }}" required>
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
