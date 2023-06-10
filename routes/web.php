@@ -34,6 +34,9 @@ Route::get('/letter_out', [LettersoutController::class, 'index'])->name('letter_
 Route::get('/letter_out/add', [LettersoutController::class, 'add'])->name('letter_out_add');
 Route::post('/letter_out/add/submit', [LettersoutController::class, 'submit'])->name('letter_out_add_submit');
 Route::get('/letter_out/delete/{id}', [LettersoutController::class, 'delete'])->name('letter_out_add_delete');
+Route::get('/letter_out/detail/{id}', [LettersoutController::class, 'detail'])->name('letter_out_detail');
+Route::get('/letter_out/edit/{id}', [LettersoutController::class, 'edit'])->name('letter_out_edit');
+Route::post('/letter_out/edit/update', [LettersoutController::class, 'update'])->name('letter_out_edit_update');
 
 
 Route::get('/letter_in', [LetterController::class, 'index'])->name('letter_in');
