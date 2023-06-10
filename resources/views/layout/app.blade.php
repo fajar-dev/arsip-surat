@@ -98,27 +98,27 @@
                   <ul class="metismenu" id="menu">
                       <li class="nav-label first">Main Menu</li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-app-store"></i>
+                          <a href="{{ route('dashboard') }}" aria-expanded="false"><i class="icon icon-app-store"></i>
                               <span  class="nav-text">Dashboard</span>
                           </a>
                       </li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-globe-2"></i>
+                          <a href="{{ route('agency') }}" aria-expanded="false"><i class="icon icon-globe-2"></i>
                               <span  class="nav-text">Instansi</span>
                           </a>
                       </li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-layout-25"></i>
+                          <a href="{{ route('sender') }}" aria-expanded="false"><i class="icon icon-layout-25"></i>
                               <span  class="nav-text">Pengirim</span>
                           </a>
                       </li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-form"></i>
+                          <a href="{{ route('letter_out') }}" aria-expanded="false"><i class="icon icon-form"></i>
                               <span  class="nav-text">Surat Masuk</span>
                           </a>
                       </li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-form"></i>
+                          <a href="{{ route('letter_in') }}" aria-expanded="false"><i class="icon icon-form"></i>
                               <span  class="nav-text">Surat Keluar</span>
                           </a>
                       </li>
