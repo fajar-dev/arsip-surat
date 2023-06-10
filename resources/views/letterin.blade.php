@@ -42,10 +42,10 @@
                                                 <td>{{ $row->disposisi}}</td>
                                                 <td>{{ $row->name}}</td>
                                                 <td>
-                                                    <a href=""  class="btn btn-info">Info</a>
-                                                    <a href=""  class="btn btn-warning">Edit</a>
-                                                    <a href="/sender_delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
-                                                </td>
+                                                  <a href="/letter_in/detail/{{ $row->id }}" class="btn btn-info">Detail</a>
+                                                  <a href="/letter_in/edit/{{ $row->id }}"  class="btn btn-warning">Edit</a>
+                                                  <a href="/letter_in/delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
+                                              </td>
                                             </tr>
                                             @endforeach
                                         </tbody>

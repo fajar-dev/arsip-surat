@@ -31,5 +31,12 @@ class LettersoutController extends Controller
         return redirect()->route('letter_out')->with('success','Notes have been added');
     }
 
+    public function delete($id)
+    {
+        DB::table('lettersouts')->where('id', $id)->delete();
+        return redirect()->route('letter_out')->with('success','Notes have been added');
+
+    }
+
 }
 

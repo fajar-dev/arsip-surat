@@ -36,8 +36,9 @@
                                                 <td>{{ $row->regarding }}</td>
                                                 <td>{{ $row->purpose}}</td>
                                                 <td>
-                                                    <a href=""  class="btn btn-warning">Edit</a>
-                                                    <a href="/sender_delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
+                                                    <a href="/letter_out/detail/{{ $row->id }}" class="btn btn-info">Detail</a>
+                                                    <a href="/letter_out/edit/{{ $row->id }}"  class="btn btn-warning">Edit</a>
+                                                    <a href="/letter_out/delete/{{ $row->id }}" onclick="confirm('anda yakin ingin menghapus data ini?')" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
                                             @endforeach

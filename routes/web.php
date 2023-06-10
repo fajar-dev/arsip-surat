@@ -33,8 +33,11 @@ Route::get('/sender_delete/{id}', [SenderController::class, 'delete'])->name('se
 Route::get('/letter_out', [LettersoutController::class, 'index'])->name('letter_out');
 Route::get('/letter_out/add', [LettersoutController::class, 'add'])->name('letter_out_add');
 Route::post('/letter_out/add/submit', [LettersoutController::class, 'submit'])->name('letter_out_add_submit');
+Route::get('/letter_out/delete/{id}', [LettersoutController::class, 'delete'])->name('letter_out_add_delete');
+
 
 Route::get('/letter_in', [LetterController::class, 'index'])->name('letter_in');
 Route::get('/letter_in/add', [LetterController::class, 'add'])->name('letter_in_add');
 Route::post('/letter_in/add/submit', [LetterController::class, 'submit'])->name('letter_in_add_submit');
+Route::get('/letter_in/delete/{id}', [LetterController::class, 'delete'])->name('letter_in_add_delete');
 

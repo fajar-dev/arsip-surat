@@ -12,6 +12,7 @@ class LetterController extends Controller
     public function index()
     {
         $data = DB::table('letters')
+        ->select('letters.id', 'letters.letter_no', 'letters.letter_date', 'letters.date_received', 'letters.agenda_no', 'letters.regarding', 'letters.disposisi', 'senders.name')
         ->join('senders', 'senders.id', '=', 'letters.sender_id')
         ->get();
         return view('letterin', compact('data'));
@@ -39,5 +40,12 @@ class LetterController extends Controller
             'letter_file' => $path,
         ]);
         return redirect()->route('letter_in')->with('success','Notes have been added');
+    }
+
+    public function delete($id)
+    {
+        DB::table('letters')->where('id', $id)->delete();
+        return redirect()->route('letter_in')->with('success','Notes have been added');
+
     }
 }
