@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LetterController;
 use App\Http\Controllers\SenderController;
@@ -18,6 +19,9 @@ use App\Http\Controllers\LettersoutController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/login_action', [AuthController::class, 'login_action'])->name('login_action')->middleware('guest');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
