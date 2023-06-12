@@ -23,7 +23,7 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="{{ route('login_action') }}" method="POST">
+                                    <form action="{{ route('login_submit') }}" method="POST">
                                       @csrf
                                         <div class="form-group">
                                             <label><strong>Email</strong></label>

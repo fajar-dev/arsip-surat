@@ -20,7 +20,7 @@ use App\Http\Controllers\LettersoutController;
 |
 */
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
-Route::post('/login_action', [AuthController::class, 'login_action'])->name('login_action')->middleware('guest');
+Route::post('submit', [AuthController::class, 'submit'])->name('login_submit')->middleware('guest');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
