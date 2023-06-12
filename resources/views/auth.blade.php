@@ -13,6 +13,13 @@
 
 </head>
 
+
+    @if ($errors->any())
+        <script>
+            alert('Username atau password yang anda masukan salah')
+        </script>
+    @endif
+
 <body class="h-100">
     <div class="authincation h-100">
         <div class="container-fluid h-100">
