@@ -16,4 +16,14 @@ class DisposisiController extends Controller
         ->get();
         return view('disposisi', compact('data'));
     }
+
+    public function detail($id)
+    {
+        $data = DB::table('disposisis')
+        ->select('disposisis.id', 'disposisis.letter_id', 'agencies.name', 'disposisis.tgl_surat', 'disposisis.no_agenda', 'disposisis.tgl_diterima', 'disposisis.tgl_penyelesaian', 'disposisis.hal', 'disposisis.diteruskan_kpd', 'disposisis.instruksi', 'disposisis.letter_file')
+        ->join('agencies', 'agencies.id', '=', 'disposisis.agency_id')
+        ->first();
+        // dd($data);
+        return view('disposisi_detail', compact('data'));
+    }
 }

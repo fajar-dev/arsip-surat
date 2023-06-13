@@ -53,6 +53,7 @@ Route::get('/letter_in/delete/{id}', [LetterController::class, 'delete'])->name(
 Route::get('/letter_in/detail/{id}', [LetterController::class, 'detail'])->name('letter_in_detail')->middleware('auth');
 
 Route::get('/disposisi', [DisposisiController::class, 'index'])->name('disposisi')->middleware('auth');
+Route::get('/disposisi/detail/{id}', [DisposisiController::class, 'detail'])->name('disposisi_detail')->middleware('auth');
 
 
 Route::get('/account', [AccountController::class, 'index'])->name('account')->middleware('auth');
