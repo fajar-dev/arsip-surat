@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Arsip Surat - BPJS Kesehatan </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo-text.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/owl-carousel/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/owl-carousel/css/owl.theme.default.min.css') }}">
     <link href="{{ asset('assets/vendor/jqvmap/css/jqvmap.min.css') }}" rel="stylesheet">
@@ -73,7 +73,7 @@
                                           <i class="icon-user"></i>
                                           <span class="ml-2">Profile </span>
                                       </a>
-                                      <a href="./page-login.html" class="dropdown-item">
+                                      <a href="{{ route('logout') }}" class="dropdown-item">
                                           <i class="icon-key"></i>
                                           <span class="ml-2">Logout </span>
                                       </a>

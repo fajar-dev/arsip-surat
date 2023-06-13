@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Login </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo-text.png') }}">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 
 </head>
@@ -24,11 +24,14 @@
     <div class="authincation h-100">
         <div class="container-fluid h-100">
             <div class="row justify-content-center h-100 align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="authincation-content">
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
+                                    <div class="text-center">
+                                        <img class="logo-abbr mb-4" src="{{ asset('assets/images/logo.png') }}" width="300" alt="">
+                                    </div>
                                     <h4 class="text-center mb-4">Sign in your account</h4>
                                     <form action="{{ route('login_submit') }}" method="POST">
                                       @csrf
@@ -49,7 +52,7 @@
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign me in</button>
+                                            <button type="submit" class="btn btn-success btn-block text-light" style="background-color: #00A652 !important">Sign me in</button>
                                         </div>
                                     </form>
                                 </div>
