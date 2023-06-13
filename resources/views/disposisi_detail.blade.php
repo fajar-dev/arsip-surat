@@ -8,7 +8,7 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
-                                <h4 class="card-title">Detail Surat Keluar</h4>
+                                <h4 class="card-title">Detail Surat Disposisi</h4>
                             </div>  
 
                             <div class="card-body">
@@ -23,52 +23,59 @@
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Tanggal Surat </td>
+                                        <td>Surat Dari </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->letter_date }}</span>
+                                          <span>{{ $data->name }}</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Tanggal Diterima </td>
+                                        <td>Tanggal Surat </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->date_received }}</span>
+                                          <span>{{ $data->tgl_surat }}</span>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>Nomor Agenda </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->agenda_no }}</span>
+                                          <span>{{ $data->no_agenda }}</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Perihal </td>
+                                        <td>Tanggal diterima </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->regarding }}</span>
+                                          <span>{{ $data->tgl_diterima }}</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Tujuan Disposisi </td>
+                                        <td>Tanggal Penyelesaian </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->disposisi }}</span>
+                                          <span>{{ $data->tgl_penyelesaian }}</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Pengirim Surat </td>
+                                        <td>Instruksi </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->sender_name }}</span>
+                                          <span>{{ $data->instruksi }}</span>
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td>Instansi </td>
+                                        <td>Diteruskan Kepada </td>
                                         <td>:</td>
                                         <td>
-                                          <span>{{ $data->agencies_name }}</span>
+                                          <span>{{ $data->diteruskan_kpd }}</span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>Hal </td>
+                                        <td>:</td>
+                                        <td>
+                                          <span>{{ $data->hal }}</span>
                                         </td>
                                       </tr>
                                       <tr>
