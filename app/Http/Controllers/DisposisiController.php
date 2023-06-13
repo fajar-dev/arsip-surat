@@ -26,4 +26,29 @@ class DisposisiController extends Controller
         // dd($data);
         return view('disposisi_detail', compact('data'));
     }
+
+    public function add()
+    {
+        $data['instansi'] = DB::table('agencies')->get();
+        return view('disposisi_add', compact('data'));
+    }
+
+    public function submit(Request $request)
+    {
+        $path = $request->file('file')->store('image', 'public');
+        DB::table('disposisis')->insert([
+            'letter_id' => $request->no,
+            'agency_id' => $request->agency,
+            'tgl_surat' => $request->tgl_surat,
+            'no_agenda' => $request->agenda,
+            'tgl_diterima' => $request->tgl_diterima,
+            'tgl_penyelesaian' => $request->tgl_penyelesaian,
+            'hal' => $request->hal,
+            'diteruskan_kpd' => $request->disposisi,
+            'instruksi' => $request->instruksi,
+            'letter_file' => $path
+
+        ]);
+        return redirect()->route('disposisi')->with('success','Notes have been added');
+    }
 }

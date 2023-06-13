@@ -8,8 +8,8 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-beetwen">
-                                <h4 class="card-title">Surat Masuk</h4>
-                                <a href="{{ route('letter_in_add') }}" class="btn btn-rounded btn-primary" ><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
+                                <h4 class="card-title">Disposisi</h4>
+                                <a href="{{ route('disposisi_add') }}" class="btn btn-rounded btn-primary" ><span class="btn-icon-left text-primary"><i class="fa fa-plus color-primary"></i>
                                 </span>Tambah</a>
                             </div>  
 

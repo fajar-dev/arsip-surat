@@ -54,6 +54,9 @@ Route::get('/letter_in/detail/{id}', [LetterController::class, 'detail'])->name(
 
 Route::get('/disposisi', [DisposisiController::class, 'index'])->name('disposisi')->middleware('auth');
 Route::get('/disposisi/detail/{id}', [DisposisiController::class, 'detail'])->name('disposisi_detail')->middleware('auth');
+Route::get('/disposisi/add', [DisposisiController::class, 'add'])->name('disposisi_add')->middleware('auth');
+Route::post('/disposisi/add/submit', [DisposisiController::class, 'submit'])->name('disposisi_submit')->middleware('auth');
+
 
 
 Route::get('/account', [AccountController::class, 'index'])->name('account')->middleware('auth');
