@@ -20,7 +20,7 @@ class CreateLettersoutsTable extends Migration
             $table->string('regarding');
             $table->string('purpose');
             $table->string('letter_file');
-            $table->string('letter_type');
+            $table->string('letter_type')->nullable();
             $table->timestamps();
         });
     }
