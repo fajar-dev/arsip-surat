@@ -24,7 +24,7 @@ class CreateLettersTable extends Migration
             $table->bigInteger('agency_id');
             $table->bigInteger('sender_id');
             $table->string('letter_file');
-            $table->string('letter_type');
+            $table->string('letter_type')->nullable();
             $table->timestamps();
         });
     }

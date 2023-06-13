@@ -8,6 +8,8 @@ use App\Http\Controllers\SenderController;
 use App\Http\Controllers\AgenciesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LettersoutController;
+use App\Http\Controllers\DisposisiController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +51,14 @@ Route::get('/letter_in/add', [LetterController::class, 'add'])->name('letter_in_
 Route::post('/letter_in/add/submit', [LetterController::class, 'submit'])->name('letter_in_add_submit')->middleware('auth');
 Route::get('/letter_in/delete/{id}', [LetterController::class, 'delete'])->name('letter_in_add_delete')->middleware('auth');
 Route::get('/letter_in/detail/{id}', [LetterController::class, 'detail'])->name('letter_in_detail')->middleware('auth');
+
+Route::get('/disposisi', [DisposisiController::class, 'index'])->name('disposisi')->middleware('auth');
+
+
+Route::get('/account', [AccountController::class, 'index'])->name('account')->middleware('auth');
+Route::post('/account/update', [AccountController::class, 'update'])->name('account_update')->middleware('auth');
+Route::post('/account/change', [AccountController::class, 'change'])->name('account_change')->middleware('auth');
+
 
 Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('auth');
 Route::post('/user/add', [UserController::class, 'add'])->name('user_add')->middleware('auth');

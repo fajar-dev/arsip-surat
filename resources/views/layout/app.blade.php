@@ -69,7 +69,7 @@
                                       <i class="mdi mdi-account"></i> <small>{{Auth::user()->name}}</small>
                                   </a>
                                   <div class="dropdown-menu dropdown-menu-right">
-                                      <a href="./app-profile.html" class="dropdown-item">
+                                      <a href="{{ route('account') }}" class="dropdown-item">
                                           <i class="icon-user"></i>
                                           <span class="ml-2">Profile </span>
                                       </a>
@@ -121,7 +121,7 @@
                           </a>
                       </li>
                       <li>
-                          <a href="widget-basic.html" aria-expanded="false"><i class="icon icon-single-copy-06"></i>
+                          <a href="{{ route('disposisi') }}" aria-expanded="false"><i class="icon icon-single-copy-06"></i>
                               <span  class="nav-text">Disposisi</span>
                           </a>
                       </li>
@@ -147,8 +147,10 @@
 
           @yield('content')
 
-          @if()
-
+          @if(Session::has('success'))
+            <script>
+                alert('berhasil')
+            </script>
           @endif
 
 
